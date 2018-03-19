@@ -29,6 +29,14 @@
     font-weight: 800;
     letter-spacing: 0.25px;
   }
+  .company-info{
+    text-align: center;
+    padding-top: 40px;
+  }
+  .company-info h4{
+    text-align: left !important;
+    margin-left: 15px;
+  }
   .company-info-container h1,span,form{
     margin-left: 2.5%;
     margin-right: 2.5%;
@@ -62,6 +70,16 @@
     cursor: pointer;
     width:24%;
   }
+  .upload-btn{
+    background-color: #fff;
+    border: 1px solid #00c8c8 !important;
+    color: #00c8c8;
+    border-radius: 25px;
+    margin: 25px 0px 25px 0px;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    width:38%;
+  }
   .submit-btn:hover{
     border: 1px solid #00c8c8 !important;
     background-color: #00c8c8;
@@ -94,6 +112,32 @@ input{
 .formpadding{
   margin-top: 25px;
 }
+.upload{
+  padding-left: 0px;
+}
+.upload-img{
+    width: 75%;
+}
+.submit-btn{
+  background-color: #fff;
+  border: 1px solid #00c8c8 !important;
+  color: #00c8c8;
+  border-radius: 30px;
+  margin: 25px 0px 25px 0px;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  margin-left: 275px;
+}
+.submit-btn:hover{
+  border: 1px solid #00c8c8 !important;
+  background-color: #00c8c8;
+  color: #fff;
+}
+.btn-container submit-btn{
+  width: 25%!important;
+  margin-left: 200px;
+}
+
   @media (max-width:992px) and (min-width:400px) {
     .contact-form-container h4{
       margin-top: 0px !important;
@@ -185,7 +229,7 @@ input{
       <div class="col-md-9 col-xs-12">
         <div class="row company-info-container">
           <div class="col-md-12 mainheading">
-          <h1>Company <br> Information</h1>
+          <h1>Product <br> Information</h1>
           <span class="border-bottom"></span>
           <img src="images/user.ico" class="right-image" style="height:50px; width:50px;">
           <img src="images/bell.ico" class="right-image" style="height:50px; width:50px;">
@@ -194,26 +238,12 @@ input{
 
           <div class="col-md-4 col-xs-12 company-info">
             <div>
-              <form class="company-form" action="/">
-                <label for="comapny_name"style="width:100%">COMPANY NAME
-                  <input name="company_name" type="text" class="form-control">
-                </label>
-                <label for="address"style="width:100%">ADDRESS LINE 1
-                  <input name="address" type="text" class="form-control">
-                </label>
-                <label for="country"style="width:100%">COUNTRY
-                  <input name="country" type="text" class="form-control">
-                </label>
-                <label for="state"style="width:100%">STATE
-                  <input name="state" type="text" class="form-control">
-                </label>
-                <label for="city"style="width:100%">CITY
-                  <input name="city" type="text" class="form-control">
-                </label>
-                <label for="zip"style="width:100%">ZIP CODE
-                  <input name="zip" type="text" class="form-control">
-                </label>
-              </form>
+              <h4>Product Logo</h4>
+              <img src="images/Drag-and-drop.png" class="upload-img" alt="Drag and drop">
+              <p>Drag and Drop file or Upload</p>
+              <div class="btn-container upload">
+                <button type="submit" class="upload-btn">Upload</button>
+              </div>
             </div>
           </div>
           <div class="contact-form-container">
@@ -226,8 +256,6 @@ input{
                 <label for="designation"style="width:100%">DESIGNATION
                   <input name="designation" type="text" class="form-control">
                 </label>
-                <label for="landline"style="width:100%">LANDLINE NUMBER
-                  <input name="landline" type="text" class="form-control">
                 </label>
               </div>
               <div class="col-md-4 col-xs-12 formpadding">
@@ -237,15 +265,21 @@ input{
                 <label for="email"style="width:100%">EMAIL ID
                   <input name="email" type="text" class="form-control">
                 </label>
-                <label for="mnumber"style="width:100%">MOBILE NUMBER
-                  <input name="mnumber" type="text" class="form-control">
                 </label>
               </div>
               <div class="row">
-              <div class="btn-container col-md-6 col-xs-12">
-                <button type="submit" class="submit-btn">Submit</button>
+                <div class="col-md-8">
+                    <label for="mnumber"style="width:100%">MOBILE NUMBER
+                    <input name="mnumber" type="text" class="form-control">
+                </div>
+                <div class="col-md-8">
+                    <label for="mnumber"style="width:100%">MOBILE NUMBER
+                    <input name="mnumber" type="text" class="form-control">
+                </div>
+                <div class="btn-container col-md-6 col-xs-12">
+                  <button type="submit" class="submit-btn">Submit</button>
+                </div>
               </div>
-            </div>
             </form>
           </div>
         </div>
