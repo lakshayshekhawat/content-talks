@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/w3.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  .table{
+    width: 81% !important;
+  }
+  .vertical-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .heading{
+    margin-top: 20px;
+    padding-left: 50px;
+  }
+  .border-bottom{
+    display: block;
+    width: 18%;
+    height: 5px;
+    background: #00c8c8;
+  }
+  .card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+  .topcards{
+    height:150px;
+    margin-top: 20px;
+    display:flex;
+    flex-direction: row;
+  }
+  .maincard{
+    margin-top: 20px;
+  }
+  th, td {
+    border-bottom: 1px solid #ddd;
+  }
+  .topcards {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .topcards p {
+
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+  .col-m-4{
+    width: 30%;
+  }
+  th,td{
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+   .maincard p {
+    text-align: center;
+    width:81%;
+    color:#00c8c8;
+    letter-spacing: 2px;
+    font-size:11px;
+    font-weight: 600;
+  }
+  .maincard h3{
+    font-size: 20px!important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  #ctscore{
+    background-color: #00c8c8;
+    border-radius: 50%;
+    width: 45px;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: -10px;
+    margin-top: -9px;
+  }
+  .table>tbody>tr>th{
+    border-top:none;
+  }
+  th,td{
+    border-bottom: none;
+  }
+  .headerimages{
+    padding-right:25px;
+  }
+  .right-image{
+    float: right;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div class="col-md-3">
+      <nav class="w3-sidebar w3-blakk w3-collapse w3-top w3-large w3-padding col-md-3" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+          <h3 class="w3-padding-bot"><img src="images/content.png"  width="50%" height="50%"></h3>
+        </div>
+        <div class="w3-bar-block">
+
+          <a href="#dashboard" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-whoit" ><img src="images/Dashboard-icon.png" style="height:35px; width:35px;"><span class="menu">Dashboard</span></a>
+          <a href="#repository" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-whoit"><img src="images/Repository.png" style="height:35px; width:35px;"><span class="menu">Repository <span></a>
+            <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-hover-whoit w3-left-align" id="myBtn"><img src="images/Configuration.png" style="height:35px; width:35px;"><span class="menu">Configuration<span> <i class="fa fa-caret-down"></i>
+            </a>
+            <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+              <a href="#" class="w3-bar-item w3-button =">Lead Config</a>
+              <a href="#" class="w3-bar-item w3-button">Employee Config</a>
+            </div>
+
+            <a onclick="myAccFuncd()" href="javascript:void(0)" class="w3-button w3-block w3-hover-whoit w3-left-align" id="myBtn"><img src="images/send.png" style="height:35px; width:35px;"><span class="menu">Send<span> <i class="fa fa-caret-down"></i>
+            </a>
+            <div id="demoAccd" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+              <a href="#" class="w3-bar-item w3-button"></i>Campaigns</a>
+              <a href="#" class="w3-bar-item w3-button">Quick Send</a>
+            </div>
+
+            <a onclick="myAccFun()" href="javascript:void(0)" class="w3-button w3-block w3-hover-whoit w3-left-align" id="myBtn"><img src="images/settings.png" style="height:35px; width:35px;"><span class="menu">Settings</span> <i class="fa fa-caret-down"></i>
+            </a>
+            <div id="demoAc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+              <a href="#" class="w3-bar-item w3-button"></i>Company Info</a>
+              <a href="#" class="w3-bar-item w3-button">Product Info</a>
+            </div>
+
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-whoit"><img src="images/target.png" style="height:35px; width:35px;"><span class="menu"> Target Outreach</span></a>
+          </div>
+        </nav>
+      </div>
+      <div class="col-md-9">
+        <div class="col-md-6 heading">
+        <h1>DASHBOARD</h1>
+        <span class="border-bottom"></span>
+      </div>
+      <div class="col-md-6 headerimages">
+        <img src="images/user.ico" class="right-image" style="height:50px; width:50px;">
+      </div>
+        <div class="row col-md-12 vertical-center">
+
+          <div class="col-m-4">
+            <div class="card">
+              <div class="topcards">
+                <img src="images/Dashboard-mail-icon.png" alt="mail icon" style="height:100px;width:100px;margin-right:50px;">
+                <p>TOTAL EMAIL<br>
+                  <span style="font-size:25px;">750<span></p>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-m-4">
+              <div class="card">
+                <div class="topcards">
+                  <img src="images/Dashboard-campaign-icon.png" alt="campaign icon" style="height:100px;width:100px;margin-right:20px;">
+                  <p>TOTAL CAMPAIGNS<br>
+                    <span style="font-size:25px;">35<span></p>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-m-4">
+                <div class="card">
+                  <div class="topcards">
+                    <img src="images/Dashboard-employee-icon.png" alt="employee icon" style="height:100px;width:100px;margin-right:18px;">
+                    <p>TOTAL EMPLOYEES<br>
+                      <span style="font-size:25px;">20<span></p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class= "col-md-12">
+                <div class=" card">
+                  <div class="container maincard">
+                    <h3>Latest Activity</h3>
+                    <table class="table">
+                      <tr>
+                        <th>S.NO.</th>
+                        <th>Lead ID</th>
+                        <th>NAME</th>
+                        <th>NO.OF OPENS</th>
+                        <th>DURATION</th>
+                        <th>TYPE</th>
+                        <th>LAST SEEN</th>
+                        <th>CT SCORE</th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>CT1234567</td>
+                        <td>Ayan Sanger</td>
+                        <td>10</td>
+                        <td>20 mins</td>
+                        <td>QS</td>
+                        <td>2 mins ago</td>
+                        <td><p id="ctscore">20%</p></td>
+
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>CT1234567</td>
+                        <td>Ayan Sanger</td>
+                        <td>10</td>
+                        <td>20 mins</td>
+                        <td>QS</td>
+                        <td>2 mins ago</td>
+                        <td><p id="ctscore">20%</p></td>
+
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>CT1234567</td>
+                        <td>Ayan Sanger</td>
+                        <td>10</td>
+                        <td>20 mins</td>
+                        <td>QS</td>
+                        <td>2 mins ago</td>
+                        <td><p id="ctscore">20%</p></td>
+
+                      </tr>
+                    </table>
+
+
+                    <p>VIEW COMPLETE LISTING</p>
+                    <div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </body>
+            </html>
