@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Configuration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+.mainheading h1{
+  float:left;
+}
+.mainheading h1{
+  font-weight: 800;
+  letter-spacing: 0.25px;
+}
+.mainheading{
+  height:120px;
+}
+.mainheading p{
+    position: absolute;
+    top: 80px;
+    left: 150px;
+    border: 1px solid #dadada;
+    border-radius: 30%;
+    width:100%;
+    padding:20px;
+}
+.right-image{
+  float: right;
+}
+.border-bottom{
+  position: absolute;
+  left: 15px;
+  top: 105px;
+  width: 9%;
+  height: 5px;
+  background: #00c8c8;
+}
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+th,td{
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+}
+.table>tbody>tr>th{
+  border-top:none;
+}
+th,td{
+  border-bottom: none;
+}
+.table{
+  width: 81% !important;
+}
+.tablecontainer{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+th{
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 300;
+}
+.edit-btn{
+  background-color: #fff;
+  border: 1px solid black !important;
+  color: black;
+  border-radius: 30px;
+  margin: 25px 0px 25px 0px;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  width:127px;
+  margin-right: 25px;
+}
+.bottombutton{
+  float:right;
+}
+#add{
+  border: 1px solid #00c8c8;
+  color:#00c8c8;
+}
+
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="col-md-3">
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-blakk w3-collapse w3-top w3-large w3-padding col-md-3" id="mySidebar"><br>
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+      <div class="w3-container">
+        <h3 class="w3-padding-bot"><img src="images/content.png"  width="50%" height="50%"></h3>
+      </div>
+      <div class="w3-bar-block">
+
+        <a href="#dashboard" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-whoit" ><img src="images/Dashboard-icon.png" style="height:35px; width:35px;"><span class="menu">Dashboard</span></a>
+        <a href="#repository" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-whoit"><img src="images/Repository.png" style="height:35px; width:35px;"><span class="menu">Repository <span></a>
+        <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-hover-whoit w3-left-align" id="myBtn"><img src="images/Configuration.png" style="height:35px; width:35px;"><span class="menu">Configuration<span> <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="#" class="w3-bar-item w3-button =">Lead Config</a>
+          <a href="#" class="w3-bar-item w3-button">Employee Config</a>
+        </div>
+
+        <a onclick="myAccFuncd()" href="javascript:void(0)" class="w3-button w3-block w3-hover-whoit w3-left-align" id="myBtn"><img src="images/send.png" style="height:35px; width:35px;"><span class="menu">Send<span> <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="demoAccd" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="#" class="w3-bar-item w3-button"></i>Campaigns</a>
+          <a href="#" class="w3-bar-item w3-button">Quick Send</a>
+        </div>
+
+        <a onclick="myAccFun()" href="javascript:void(0)" class="w3-button w3-block w3-hover-whoit w3-left-align" id="myBtn"><img src="images/settings.png" style="height:35px; width:35px;"><span class="menu">Settings</span> <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="demoAc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="#" class="w3-bar-item w3-button"></i>Company Info</a>
+          <a href="#" class="w3-bar-item w3-button">Product Info</a>
+        </div>
+
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-whoit"><img src="images/target.png" style="height:35px; width:35px;"><span class="menu"> Target Outreach</span></a>
+      </div>
+    </nav>
+  </div>
+  <div class="col-md-9">
+    <div class="col-md-12 mainheading row">
+      <div class="col-md-6">
+    <h1>Employee <br> Configuration</h1>
+    <span class="border-bottom"></span>
+    </div>
+    <div class="col-md-4 registerview">
+    <span style="color:black;border-radius:25px;margin-top:10px;position:absolute;top: 60px;left: 150px;"><span style="background-color:#00c8c8;;padding:10px;border-top-left-radius:25px;border-bottom-left-radius:25px;padding: 10px 10px 10px 25px;border: 1px solid #00c8c8; color:white;">Register</span><span style="padding:10px;border-top-right-radius:25px;border-bottom-right-radius:25px;padding: 10px 25px 10px 10px;border: 1px solid #dadada; color:#dadada;">View</span></span>
+    </div>
+    <div class="col-md-2">
+    <img src="images/user.ico" class="right-image" style="height:50px; width:50px;">
+    </div>
+    </div>
+    <div class="col-md-12 tablecontainer">
+      <table class="table">
+        <tr>
+          <th>S.NO.</th>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>DESIGNATION</th>
+          <th>EMAIL</th>
+          <th>ROLE</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>CT1234567</td>
+          <td>Ayan Sanger</td>
+          <td>Cheif Executive Officer</td>
+          <td>ayansanger@gmail.com</td>
+          <td><span style="color:black;"><span style="padding:10px;borderpadding: 10px 10px 10px 25px;border: 1px solid #00c8c8; color:#00c8c8;">Moderator</span><span style="padding:10px;padding: 10px 25px 10px 10px;border: 1px solid #dadada; color:#dadada;">User</span></span></td>
+          </tr>
+        <tr>
+          <td>1</td>
+          <td>CT1234567</td>
+          <td>Ayan Sanger</td>
+          <td>ayansanger07@gmail.com</td>
+          <td>Chennai,India</td>
+          <td><span style="color:black;"><span style="padding:10px;borderpadding: 10px 10px 10px 25px;border: 1px solid #00c8c8; color:#00c8c8;">Moderator</span><span style="padding:10px;padding: 10px 25px 10px 10px;border: 1px solid #dadada; color:#dadada;">User</span></span></td>
+
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>CT1234567</td>
+          <td>Ayan Sanger</td>
+          <td>ayansanger07@gmail.com</td>
+          <td>Chennai,India</td>
+          <td><span style="color:black;"><span style="padding:10px;borderpadding: 10px 10px 10px 25px;border: 1px solid #00c8c8; color:#00c8c8;">Moderator</span><span style="padding:10px;padding: 10px 25px 10px 10px;border: 1px solid #dadada; color:#dadada;">User</span></span></td>
+
+        </tr>
+      </table>
+
+    </div>
+    <div class="col-md-12">
+      <div class="bottombutton">
+        <button type="submit" class="edit-btn">Edit</button>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

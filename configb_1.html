@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Configuration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/w3.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+  body,h1,h2,h3,h4,h5,label {font-family: "Poppins", sans-serif;font-weight: 400;}
+  body {font-size:16px;}
+  .border-bottom{
+    position: absolute;
+    left: 15px;
+    top: 105px;
+    width: 9%;
+    height: 5px;
+    background: #00c8c8;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+  .company-info-container h1{
+    font-weight: 800;
+    letter-spacing: 0.25px;
+  }
+  .company-info{
+    text-align: center;
+    padding-top: 40px;
+  }
+  .company-info h4{
+    text-align: left !important;
+    margin-left: 15px;
+  }
+  .company-info-container h1,form{
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+  .
+  .company-form,.contact-form{
+    margin-top: 25px;
+  }
+  .company-form label,.contact-form-container{
+    letter-spacing: 2px;
+  }
+  .company-form label{
+    margin-top: 15px;
+    font-size: 10px;
+  }
+  .contact-form-container label{
+    font-size: 10px;
+  }
+  .contact-form label{
+    margin-top: 15px;
+  }
+  .contact-form-container h4{
+    margin-top: -30px;
+  }
+  .submit-btn{
+    background-color: #fff;
+    border: 1px solid #00c8c8 !important;
+    color: #00c8c8;
+    border-radius: 25px;
+    margin: 25px 0px 25px 0px;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    width:24%;
+  }
+  .upload-btn{
+    background-color: #fff;
+    border: 1px solid #00c8c8 !important;
+    color: #00c8c8;
+    border-radius: 25px;
+    margin: 25px 0px 25px 0px;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    width:58%;
+  }
+
+  .mobile-header{
+    height: 0px;
+  }
+
+.submit-btn{
+     margin-left: 275px;
+}
+.form-control:focus{
+    box-shadow: none !important;
+    border-color: #00c8c8;
+}
+label{
+  color: #b2b8c0;
+}
+input{
+  color: #dadada;
+}
+.mainheading h1{
+  float:left;
+}
+.right-image{
+  float: right;
+}
+.formpadding{
+  margin-top: 25px;
+}
+.upload{
+  padding-left: 0px;
+}
+.upload-img{
+    width: 75%;
+}
+.moderator-btn{
+  background-color: #fff;
+  border: 1px solid #00c8c8 !important;
+  color: #00c8c8;
+  border-radius: 5px;
+  margin: 25px 0px 25px 0px;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  margin-right: 30px;
+  width:30%;
+}
+.user-btn{
+  background-color: #fff;
+  border: 1px solid #dadada !important;
+  color: #dadada;
+  border-radius: 5px;
+  margin: 25px 0px 25px 0px;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  width:30%;
+}
+.bottombutton{
+  display:flex;
+  justify-content: center;
+}
+.register{
+  display:flex;
+  justify-content: center;
+}
+.register-btn{
+  background-color: #fff;
+  border: 1px solid #00c8c8 !important;
+  color: #00c8c8;
+  border-radius: 25px;
+  margin: 15px 0px 25px 0px;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  width:25%;
+}
+
+
+  @media (max-width:992px) and (min-width:400px) {
+    .contact-form-container h4{
+      margin-top: 0px !important;
+    }
+    .company-form label{
+      margin-top: 5px;
+    }
+    .contact-form label{
+      margin-top: 5px;
+    }
+    .company-info-container h1,span,form{
+      margin-left: 5%
+    }
+    .company-info-container h1{
+      text-align: center;
+    }
+    .border-bottom{
+      display: none;
+    }
+    .contact-form-container h4{
+      text-align: center;
+      margin-top: 15px !important;
+    }
+    .mobile-header{
+      height: 50px;
+      background-color: black;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 25px;
+    }
+    .fa-bars{
+      background-color: white;
+    }
+  }
+
+  </style>
+
+
+</head>
+<body>
+  <div>
+    <!--MOBILE HEADER -->
+    <div class="mobile-header-container">
+      <div class="row">
+        <div class="col-xs-12 mobile-header">
+          <i class="fa fa-bars fa-2x"></i>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <!-- Sidebar/menu -->
+        <nav class="w3-sidebar w3-blakk w3-collapse w3-top w3-large w3-padding col-md-3" id="mySidebar"><br>
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+          <div class="w3-container">
+            <h3 class="w3-padding-bot"><img src="images/content.png"  width="50%" height="50%"></h3>
+          </div>
+          <div class="w3-bar-block">
+
+            <a href="#dashboard" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-whoit" ><img src="images/Dashboard-icon.png" style="height:35px; width:35px;"><span class="menu">Dashboard</span></a>
+            <a href="#repository" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-whoit"><img src="images/Repository.png" style="height:35px; width:35px;"><span class="menu">Repository <span></a>
+            <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-hover-whoit w3-left-align" id="myBtn"><img src="images/Configuration.png" style="height:35px; width:35px;"><span class="menu">Configuration<span> <i class="fa fa-caret-down"></i>
+            </a>
+            <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+              <a href="#" class="w3-bar-item w3-button">Lead Config</a>
+              <a href="#" class="w3-bar-item w3-button">Employee Config</a>
+            </div>
+
+            <a onclick="myAccFuncd()" href="javascript:void(0)" class="w3-button w3-block w3-hover-whoit w3-left-align" id="myBtn"><img src="images/send.png" style="height:35px; width:35px;"><span class="menu">Send<span> <i class="fa fa-caret-down"></i>
+            </a>
+            <div id="demoAccd" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+              <a href="#" class="w3-bar-item w3-button"></i>Campaigns</a>
+              <a href="#" class="w3-bar-item w3-button">Quick Send</a>
+            </div>
+
+            <a onclick="myAccFun()" href="javascript:void(0)" class="w3-button w3-block w3-hover-whoit w3-left-align" id="myBtn"><img src="images/settings.png" style="height:35px; width:35px;"><span class="menu">Settings</span> <i class="fa fa-caret-down"></i>
+            </a>
+            <div id="demoAc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+              <a href="#" class="w3-bar-item w3-button"></i>Company Info</a>
+              <a href="#" class="w3-bar-item w3-button">Product Info</a>
+            </div>
+
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-whoit"><img src="images/target.png" style="height:35px; width:35px;"><span class="menu"> Target Outreach</span></a>
+          </div>
+        </nav>
+      </div>
+      <div class="col-md-9 col-xs-12">
+        <div class="col-md-12 mainheading row">
+          <div class="col-md-6">
+        <h1>Employee <br> Configuration</h1>
+        <span class="border-bottom"></span>
+        </div>
+        <div class="col-md-4 registerview">
+        <span style="color:black;border-radius:25px;margin-top:10px;position:absolute;top: 60px;left: 150px;"><span style="background-color:#00c8c8;;padding:10px;border-top-left-radius:25px;border-bottom-left-radius:25px;padding: 10px 10px 10px 25px;border: 1px solid #00c8c8; color:white;">Register</span><span style="padding:10px;border-top-right-radius:25px;border-bottom-right-radius:25px;padding: 10px 25px 10px 10px;border: 1px solid #dadada; color:#dadada;">View</span></span>
+        </div>
+        <div class="col-md-2">
+        <img src="images/user.ico" class="right-image" style="height:50px; width:50px;">
+        </div>
+        </div>
+
+
+          <div class="col-md-4 col-xs-12 company-info">
+            <div>
+              <h4>Bulk Upload</h4>
+              <img src="images/Drag-and-drop.png" class="upload-img" alt="Drag and drop">
+              <p>Drag and Drop file or Upload</p>
+              <div class="btn-container upload">
+                <button type="submit" class="upload-btn">Upload CSV/XLS</button>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-container">
+            <form class="contact-form" action="/">
+              <div class="col-md-4 col-xs-12 formpadding">
+                <h4>Register</h4>
+                <label for="fname"style="width:100%">EMPLOYEE NAME
+                  <input name="fname" type="text" class="form-control">
+                </label>
+                <label for="designation"style="width:100%">EMAIL ID
+                  <input name="designation" type="text" class="form-control">
+                </label>
+                <label for="designation"style="width:100%">DESIGNATION
+                  <input name="designation" type="text" class="form-control">
+                </label>
+               </div>
+               <div class="col-md-4 col-xs-12 formpadding">
+                <label for="lname"style="width:100%">EMPLOYEE ID
+                  <input name="lname" type="text" class="form-control">
+                </label>
+                <label for="email"style="width:100%">CONTACT NUMBE
+                  <input name="email" type="text" class="form-control">
+                </label>
+                </label>
+              </div>
+            </form>
+            <div class="col-md-8 bottombutton">
+              <button type="submit" class="moderator-btn">Moderator</button>
+              <button type="submit" class="user-btn">User</button>
+            </div>
+            <div class="col-md-8 register">
+              <button type="submit" class="register-btn">Register</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  //function for highlighting label when input is focused
+  $("input").on("focus",function(){
+            console.log($(this).parents('label'));
+            $(this).parents('label').css("color","#00c8c8")
+        });
+        $("input").on("blur",function(){
+            console.log($(this).parents('label'));
+            $(this).parents('label').css("color","#b2b8c0")
+        });
+  // Accordion
+  function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  function myAccFuncd() {
+    var x = document.getElementById("demoAccd");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  function myAccFun() {
+    var x = document.getElementById("demoAc");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  //script for tab
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  function myFunction1() {
+    document.getElementById("myDropdown1").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+  $(".fa-bars").on("click",function(){
+    //slide left the menu
+  });
+  </script>
+</body>
+</html>

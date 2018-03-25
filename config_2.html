@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/w3.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Configuration</title>
+<style>
+.mainheading h1{
+  float:left;
+}
+.mainheading h1{
+  font-weight: 800;
+  letter-spacing: 0.25px;
+}
+.mainheading{
+  height:120px;
+}
+.mainheading p{
+    position: absolute;
+    top: 80px;
+    left: 150px;
+    border: 1px solid #dadada;
+    border-radius: 30%;
+    width:100%;
+    padding:20px;
+}
+.right-image{
+  float: right;
+}
+.border-bottom{
+  position: absolute;
+  left: 15px;
+  top: 105px;
+  width: 9%;
+  height: 5px;
+  background: #00c8c8;
+}
+.motive{
+  border: 5px solid #dadada;
+  border-radius: 20%;
+  height:170px;
+  width:150px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+.maincontainer{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+}
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="col-md-3">
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-blakk w3-collapse w3-top w3-large w3-padding col-md-3" id="mySidebar"><br>
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+      <div class="w3-container">
+        <h3 class="w3-padding-bot"><img src="images/content.png"  width="50%" height="50%"></h3>
+      </div>
+      <div class="w3-bar-block">
+
+        <a href="#dashboard" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-whoit" ><img src="images/Dashboard-icon.png" style="height:35px; width:35px;"><span class="menu">Dashboard</span></a>
+        <a href="#repository" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-whoit"><img src="images/Repository.png" style="height:35px; width:35px;"><span class="menu">Repository <span></a>
+        <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-hover-whoit w3-left-align" id="myBtn"><img src="images/Configuration.png" style="height:35px; width:35px;"><span class="menu">Configuration<span> <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="#" class="w3-bar-item w3-button =">Lead Config</a>
+          <a href="#" class="w3-bar-item w3-button">Employee Config</a>
+        </div>
+
+        <a onclick="myAccFuncd()" href="javascript:void(0)" class="w3-button w3-block w3-hover-whoit w3-left-align" id="myBtn"><img src="images/send.png" style="height:35px; width:35px;"><span class="menu">Send<span> <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="demoAccd" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="#" class="w3-bar-item w3-button"></i>Campaigns</a>
+          <a href="#" class="w3-bar-item w3-button">Quick Send</a>
+        </div>
+
+        <a onclick="myAccFun()" href="javascript:void(0)" class="w3-button w3-block w3-hover-whoit w3-left-align" id="myBtn"><img src="images/settings.png" style="height:35px; width:35px;"><span class="menu">Settings</span> <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="demoAc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="#" class="w3-bar-item w3-button"></i>Company Info</a>
+          <a href="#" class="w3-bar-item w3-button">Product Info</a>
+        </div>
+
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-whoit"><img src="images/target.png" style="height:35px; width:35px;"><span class="menu"> Target Outreach</span></a>
+      </div>
+    </nav>
+  </div>
+<div class="col-md-9">
+  <div class="col-md-12 mainheading row">
+    <div class="col-md-6">
+  <h1>Lead <br> Configuration</h1>
+  <span class="border-bottom"></span>
+  </div>
+  <div class="col-md-4 registerview">
+  <span style="color:black;border-radius:25px;margin-top:10px;position:absolute;top: 60px;left: 150px;"><span style="padding:10px;border-top-left-radius:25px;border-bottom-left-radius:25px;padding: 10px 10px 10px 25px;border: 1px solid #dadada; color:black;">Register</span><span style="border: 1px solid #00c8c8;background-color:#00c8c8;padding:10px;border-top-right-radius:25px;border-bottom-right-radius:25px;padding: 10px 25px 10px 10px;border: 1px solid #dadada;">View</span></span> 
+  </div>
+  <div class="col-md-2">
+  <img src="images/user.ico" class="right-image" style="height:50px; width:50px;">
+  </div>
+  </div>
+  <div class="col-md-12 maincontainer">
+    <div class="motive">
+      <img src="images/contacts.png" style="height:75px;width:75px;">
+      <p>Motive</p>
+    </div>
+    <div class="motive">
+      <img src="images/contacts.png" style="height:75px;width:75px;">
+      <p>Favmous</p>
+    </div>
+    <div class="motive">
+      <img src="images/contacts.png" style="height:75px;width:75px;">
+      <p>Fortune7</p>
+    </div>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>
