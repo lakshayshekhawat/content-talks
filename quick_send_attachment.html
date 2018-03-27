@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quick Send</title>
+        <style>
+        .border-bottom{
+            display: block;
+            width: 30%;
+            height: 5px;
+            background: #00c8c8;
+            margin-left: 27%;
+        }
+        .col-heading{
+            text-align: center;
+            padding-top: 25px;
+        }
+        .quick-send-form-container{
+            border-right: 1px solid #ececec;
+            height: 100vh;
+        }
+        .switch-button-container{
+            text-align: center;
+            padding-top: 45px;
+        }
+        .switch-button{
+            background-color: green;
+            color: white;
+            padding: 10px 20px 10px 20px;
+            border-radius: 25px;
+        }
+        .quick-send-form{
+            padding-top: 50px;
+        }
+        .quick-send-form input{
+            height: 40px;
+        }
+        .btn-submit{
+            border: 1px solid #00c8c8;
+            border-radius: 25px;
+            padding: 5px 25px 5px 25px;
+            color:#00c8c8;
+        }
+        .btn-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .user-image{
+            height: 40px;
+            width: 40px;
+            float: right;
+            margin: 15px 15px 0px 0px;
+        }
+        .highlight-text{
+            margin-top: 15px;
+            background-color: grey;
+            color: white;
+            padding-left: 15px;
+            height: 35px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 50%;
+        }
+        .logo{
+            height: 100px;
+        }
+        .pawprint-image{
+            border-radius: 50%;
+            height: 150px;
+        }
+        .image-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-top: 15px;
+        }
+        .attach-button-container{
+            padding-top: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .attach-button{
+            background-color: black;
+            color: white;
+            padding: 15px;
+            font-size: 16px;
+        }
+        .explore-message{
+            text-align: center;
+            font-size: 14px;
+            color: grey;
+            margin-top: 25px;
+        }
+        .quick-send-form input{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .attach-image{
+            height: 80px;
+        }
+        .attachment-image-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            border: 1px solid #dadada;
+            border-radius: 10px;
+            margin-top: 15px;
+            padding: 15px;
+            height: 200px;
+            -webkit-box-shadow: 14px 12px 13px -4px rgba(218,218,218,1);
+            -moz-box-shadow: 14px 12px 13px -4px rgba(218,218,218,1);
+            box-shadow: 14px 12px 13px -4px rgba(218,218,218,1);
+        }
+        .carousel-image{
+            border-radius: 50%;
+        }
+        .carousel-indicators{
+            top: 120px;
+            padding-left: 22% !important;
+        }
+        .carousel-indicators li{
+            background-color: grey !important;
+            border-radius: 1px solid #000 !important;
+        }
+        .carousel-heading{
+            text-align: center;
+            letter-spacing: 1px;
+            font-size: 12px;
+        }
+        .carousel{
+            padding-top: 15px;
+        }
+        .carousel-image-heading{
+            font-size: 12px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .modal-header{
+            border-bottom: none !important;
+        }
+        .topbuttons{
+            color: black;
+            border-radius: 25px;
+            margin-top: 10px;
+            position: absolute;
+            top: 123px;
+            left: 109px;
+        }
+        .latest{
+          background-color: #00c8c8;
+            padding: 10px;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            padding: 10px 10px 10px 25px;
+            border: 1px solid #00c8c8;
+            color: white;
+        }
+        .quicksend{
+            padding: 10px 25px 10px 10px;
+            border: 1px solid #dadada;
+            color: #dadada;
+        }
+        .campaigns{
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            padding: 10px 25px 10px 10px;
+            border: 1px solid #dadada;
+            color: #dadada;
+        }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/w3.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Sidebar/menu -->
+                <nav class="w3-sidebar w3-blakk w3-collapse w3-top w3-large w3-padding col-md-3" id="mySidebar"><br>
+                  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+                  <div class="w3-container">
+                    <h3 class="w3-padding-bot"><img src="images/content.png"  width="50%" height="50%"></h3>
+                  </div>
+                  <div class="w3-bar-block">
+
+                    <a href="#dashboard" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-whoit" ><img src="images/Dashboard-icon.png" style="height:35px; width:35px;"><span class="menu">Dashboard</span></a>
+                    <a href="#repository" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-whoit"><img src="images/Repository.png" style="height:35px; width:35px;"><span class="menu">Repository <span></a>
+                      <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-hover-whoit w3-left-align" id="myBtn"><img src="images/Configuration.png" style="height:35px; width:35px;"><span class="menu">Configuration<span> <i class="fa fa-caret-down"></i>
+                      </a>
+                      <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+                        <a href="#" class="w3-bar-item w3-button =">Lead Config</a>
+                        <a href="#" class="w3-bar-item w3-button">Employee Config</a>
+                      </div>
+
+                      <a onclick="myAccFuncd()" href="javascript:void(0)" class="w3-button w3-block w3-hover-whoit w3-left-align" id="myBtn"><img src="images/send.png" style="height:35px; width:35px;"><span class="menu">Send<span> <i class="fa fa-caret-down"></i>
+                      </a>
+                      <div id="demoAccd" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+                        <a href="#" class="w3-bar-item w3-button"></i>Campaigns</a>
+                        <a href="#" class="w3-bar-item w3-button">Quick Send</a>
+                      </div>
+
+                      <a onclick="myAccFun()" href="javascript:void(0)" class="w3-button w3-block w3-hover-whoit w3-left-align" id="myBtn"><img src="images/settings.png" style="height:35px; width:35px;"><span class="menu">Settings</span> <i class="fa fa-caret-down"></i>
+                      </a>
+                      <div id="demoAc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+                        <a href="#" class="w3-bar-item w3-button"></i>Company Info</a>
+                        <a href="#" class="w3-bar-item w3-button">Product Info</a>
+                      </div>
+
+                      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-whoit"><img src="images/target.png" style="height:35px; width:35px;"><span class="menu"> Target Outreach</span></a>
+                    </div>
+                  </nav>
+            </div>
+            <div class="col-md-4 quick-send-form-container">
+                <div class="col-heading">
+                    <h1> Quick Send </h1>
+                    <span class="border-bottom"></span>
+                </div>
+                <div class="switch-button-container">
+                    <span class="topbuttons"><span class="latest">Basic</span><span class="campaigns">Advance</span></span>
+                </div>
+                <div class="quick-send-form">
+                    <div class="col-md-10 col-md-push-1 col-md-pull-1">
+                        <input class="form-control" placeholder="To" />
+                    </div>
+                    <div class="col-md-10 col-md-push-1 col-md-pull-1">
+                        <input class="form-control" placeholder="Subject" />
+                    </div>
+                    <div class="col-md-10 col-md-push-1 col-md-pull-1" style="margin-top:15px">
+                            <textarea class="form-control description-area" placeholder="Description" ></textarea>
+                    </div>
+                    <div class="col-md-10 col-md-push-1 col-md-pull-1" style="margin-top:15px">
+                        <input class="form-control" placeholder="Campaign" />
+                    </div>
+                    <div class="col-md-10 col-md-push-1 col-md-pull-1">
+                        <div class="attachment-image-container">
+                            <img src="./images/Attach.png" class="attach-image">
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-md-push-1 col-md-pull-1" style="margin-top:25px;display:flex;flex-direction:row;justify-content:center">
+                        <p class="btn-submit">Send</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-md-6" style="padding-left:0px !important">
+                        <p class="highlight-text"> Email Preview </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="./images/icons/user.ico" class="user-image" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-push-1 col-md-pull-1">
+                        <img src="./images/contentb.png" class="logo" >
+                        <p style="font-weight:700;font-size:24px;margin-top:25px">Product details, first mockups and more design </p>
+                        <p style="color:grey;font-size:13px;margin-top:15px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500. </p>
+                    </div>
+                    <div class="col-md-8 col-md-push-2 col-md-pull-2">
+                        <div class="card">
+                            <p class="carousel-heading">SELECT FILES</p>
+                            <!-- carousel inside the card -->
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                              <!-- Indicators -->
+                              <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                                <p data-toggle="modal" data-target="#myModal" style="cursor:pointer;display:inline;color:blue;border:1px solid blue;border-radius:10px;padding:5px;margin-left:25px;"> Done </p>
+                              </ol>
+
+                              <!-- Wrapper for slides -->
+                              <div class="carousel-inner">
+                                <div class="item active col-md-4">
+                                  <img src="./images/pawprint.jpeg" class="carousel-image" alt="Los Angeles">
+                                  <p class="carousel-image-heading">Heading 1</p>
+                                </div>
+
+                                <div class="item active col-md-4">
+                                  <img src="./images/pawprint.jpeg" class="carousel-image" alt="Chicago">
+                                  <p class="carousel-image-heading">Heading 2</p>
+                                </div>
+
+                                <div class="item active col-md-4">
+                                  <img src="./images/pawprint.jpeg" class="carousel-image" alt="New York">
+                                  <p class="carousel-image-heading">Heading 3</p>
+                                </div>
+
+                              </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--MODAL -->
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="row">
+                          <div class="col-md-5 col-md-push-1">
+                              <h1>Bulk Send</h1>
+                              <span class="border-bottom" style="margin-left:0px !important;margin-top:10px;height:6px"></span>
+                          </div>
+                          <div class="col-md-5 col-md-push-1">
+                              <span class="topbuttons"><span class="latest">Latest</span><span class="quicksend">Quick send</span><span class="campaigns">Campaigns</span></span>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+    </body>
+</html>
